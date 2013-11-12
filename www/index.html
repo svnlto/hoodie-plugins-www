@@ -17,10 +17,12 @@
     <div class="container">
       <h1>Hoodie Plugins</h1>
       <p>A list of hoodie plugins available on NPM.</p>
-      <!--div class="input-group input-group-lg">
-        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-        <input id="search" type="search" class="form-control" placeholder="Search">
-      </div-->
+      <div class="form-group">
+        <div class="input-group input-group-lg">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+          <input id="search" type="search" class="form-control" placeholder="Search">
+        </div>
+      </div>
     </div>
   </div>
   <div id="plugins-list" class="list-group">
@@ -28,8 +30,9 @@
       {{#plugins}}
       <a href="http://npmjs.org/package/{{id}}" class="list-group-item">
         <span class="badge">v{{version}}</span>
-        <h2 class="list-group-item-heading">{{id}}</h2>
+        <h2 class="list-group-item-heading">{{name}}</h2>
         <p class="list-group-item-text">{{description}}</p>
+        <div class="hidden">{{readme}}</div>
       </a>
       {{/plugins}}
     </script>
