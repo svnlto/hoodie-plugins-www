@@ -3,6 +3,7 @@
     , store = hoodie.open("hoodie-plugin-plugins")
     , pluginsList = $("#plugins-list")
     , searchField = $("#search")
+    , loading = $("#loading")
 
   function filterList () {
     var q = searchField.val().toLowerCase()
@@ -27,6 +28,12 @@
       plugins.forEach(function (p) {
         p.name = p.id.replace("hoodie-plugin-", "")
       })
+
+      if (plugins.length) {
+        searchField.prop("disabled", false)
+        $("#loading").hide()
+      }
+
       defer.then(filterList)
       defer.resolve({plugins: plugins})
     })
@@ -35,6 +42,8 @@
   }, {store: store})
 
   store.connect()
+
+  loading.addClass("fade-in")
 
 })()
 

@@ -20,11 +20,12 @@
       <div class="form-group">
         <div class="input-group input-group-lg">
           <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-          <input id="search" type="search" class="form-control" placeholder="Search">
+          <input id="search" type="search" class="form-control" placeholder="Search" disabled>
         </div>
       </div>
     </div>
   </div>
+  <div id="loading" class="text-center"><span class="glyphicon glyphicon-repeat glyphicon-spin"></span></div>
   <div id="plugins-list" class="list-group">
     <script type="text/reactive-template">
       {{#plugins}}
