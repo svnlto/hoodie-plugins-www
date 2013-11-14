@@ -1,6 +1,6 @@
 {
   "name": "hoodie-plugins-www",
-  "version": "1.0.1",
+  "version": "1.0.1-7",
   "type": "app",
   "dependencies": {
     "hoodie-server": "~0.8.14",
@@ -10,10 +10,11 @@
     "hoodie-plugin-plugins": "~0.0.0",
     "hoodie-plugin-reactive": "~0.2.0"
   },
-  "subdomain": "hoodie-hoodie-plugins-www",
+  "subdomain": "hoodie-plugins-www",
   "domains": [
-    "admin.hoodie-hoodie-plugins-www.jit.su",
-    "couch.hoodie-hoodie-plugins-www.jit.su"
+    "plugins.hood.ie",
+    "admin.hoodie-plugins-www.jit.su",
+    "couch.hoodie-plugins-www.jit.su"
   ],
   "scripts": {
     "start": "node node_modules/hoodie-server/bin/start"
@@ -26,5 +27,8 @@
       "hoodie-plugin-plugins",
       "hoodie-plugin-reactive"
     ]
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
