@@ -13,7 +13,7 @@
 </head>
 <body>
   <img id="stripe" src="img/stripe.gif"/>
-  <div class="jumbotron">
+  <header class="jumbotron">
     <div class="container">
       <h1>Hoodie Plugins</h1>
       <p>A list of hoodie plugins available on NPM.</p>
@@ -24,20 +24,44 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
   <div id="loading" class="text-center"><span class="glyphicon glyphicon-repeat glyphicon-spin"></span></div>
   <div id="plugins-list" class="list-group">
     <script type="text/reactive-template">
       {{#plugins}}
       <a href="http://npmjs.org/package/{{id}}" class="list-group-item">
-        <span class="badge">v{{version}}</span>
-        <h2 class="list-group-item-heading">{{name}}</h2>
-        <p class="list-group-item-text">{{description}}</p>
+        <span class="badge">{{version}}</span>
+        <h2 class="list-group-item-heading">
+          {{name}}
+          <small class="maintainers">
+          {{#maintainers}}
+            <a href="http://npmjs.org/~{{name}}"><span class="label label-default">{{name}}</span></a>
+          {{/maintainers}}
+          </small>
+        </h2>
+
+        <p class="list-group-item-text">
+          {{description}}
+        </p>
+
         <div class="hidden">{{readme}}</div>
       </a>
       {{/plugins}}
     </script>
   </div>
+  <footer role="contentinfo">
+    <ul class="list-inline text-center">
+      <li><a href="http://hood.ie/">Hoodie</a></li>
+      <li class="muted">·</li>
+      <li><a href="https://github.com/alanshaw/hoodie-plugins-www">GitHub</a></li>
+      <li class="muted">·</li>
+      <li><a href="https://github.com/alanshaw/hoodie-plugins-www/issues">Issues</a></li>
+      <li class="muted">·</li>
+      <li><a href="https://github.com/alanshaw/hoodie-plugins-www/graphs/contributors">Contributors</a></li>
+      <li class="muted">·</li>
+      <li><a href="https://github.com/alanshaw/hoodie-plugins-www/releases">Releases</a></li>
+    </ul>
+  </footer>
   <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
   <script src="/_api/_files/hoodie.js"></script>

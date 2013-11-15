@@ -27,6 +27,23 @@
 #loading.fade-in {
   opacity: 1;
 }
+.badge {
+  margin-top: 0.85em;
+}
+.maintainers {
+  position: relative;
+  top: -6px;
+  font-size: 13px;
+}
+.maintainers a .label {
+  background: #f9b233;
+}
+.maintainers a:hover {
+  text-decoration: none;
+}
+.maintainers a:hover .label {
+  background: #666;
+}
 
 .glyphicon-spin {
   -moz-animation: glyphicon-spin 2s infinite linear;
@@ -62,4 +79,7 @@
   .jumbotron h1 {
     font-size: 63px;
   }
+}
+footer {
+  padding: 60px 0;
 }

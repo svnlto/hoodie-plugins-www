@@ -27,12 +27,25 @@
     store.findAll("plugin").done(function (plugins) {
       plugins.forEach(function (p) {
         p.name = p.id.replace("hoodie-plugin-", "")
+
+        if (p.maintainers) {
+          p.maintainers = p.maintainers.map(function (m, i) {
+            if (Object.prototype.toString.call(m) == "[object String]") {
+              return {name: m.replace("=", "")}
+            }
+            return m
+          })
+        }
       })
 
       if (plugins.length) {
         searchField.prop("disabled", false)
         $("#loading").hide()
       }
+
+      plugins.sort(function (a, b) {
+        return a.time > b.time ? -1 : a.time < b.time ? 1 : 0
+      })
 
       defer.then(filterList)
       defer.resolve({plugins: plugins})
