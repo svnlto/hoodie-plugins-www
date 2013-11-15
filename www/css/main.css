@@ -12,6 +12,7 @@
   margin-bottom: 0;
 }
 #search {
+  -webkit-appearance: none;
   height: 52px;
 }
 #loading {
@@ -52,4 +53,13 @@
 @keyframes glyphicon-spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(359deg); }
+}
+
+.jumbotron h1 {
+  font-size: 32px;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron h1 {
+    font-size: 63px;
+  }
 }
