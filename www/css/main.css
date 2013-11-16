@@ -28,17 +28,19 @@
   opacity: 1;
 }
 .badge {
+  /*background: #f9b233;*/
   margin-top: 0.85em;
 }
 .maintainers {
-  position: relative;
-  top: -6px;
-  font-size: 13px;
+  color: #999;
 }
-.maintainers a .label {
-  background: #f9b233;
+.maintainers a::after {
+  content: " · ";
 }
-.maintainers a:hover {
+.maintainers a:last-child::after {
+  content: "";
+}
+.maintainers a:hover, .maintainers a:focus {
   text-decoration: none;
 }
 .maintainers a:hover .label {
@@ -82,4 +84,7 @@
 }
 footer {
   padding: 60px 0;
+}
+footer img {
+  height: 22px;
 }

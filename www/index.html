@@ -31,35 +31,32 @@
       {{#plugins}}
       <a href="http://npmjs.org/package/{{id}}" class="list-group-item">
         <span class="badge">{{version}}</span>
-        <h2 class="list-group-item-heading">
-          {{name}}
-          <small class="maintainers">
+        <h2 class="list-group-item-heading">{{name}}</h2>
+        <p class="list-group-item-text">{{description}}</p>
+        <small class="maintainers">
+          Maintained by
           {{#maintainers}}
-            <a href="http://npmjs.org/~{{name}}"><span class="label label-default">{{name}}</span></a>
+          <a href="http://npmjs.org/~{{name}}">{{name}}</a>
           {{/maintainers}}
-          </small>
-        </h2>
-
-        <p class="list-group-item-text">
-          {{description}}
-        </p>
-
+        </small>
         <div class="hidden">{{readme}}</div>
       </a>
       {{/plugins}}
     </script>
   </div>
-  <footer role="contentinfo">
-    <ul class="list-inline text-center">
+  <footer class="text-center" role="contentinfo">
+    <ul class="list-inline">
       <li><a href="http://hood.ie/">Hoodie</a></li>
       <li class="muted">·</li>
-      <li><a href="https://github.com/alanshaw/hoodie-plugins-www">GitHub</a></li>
+      <li><a href="http://hood.ie/#about">About</a></li>
       <li class="muted">·</li>
-      <li><a href="https://github.com/alanshaw/hoodie-plugins-www/issues">Issues</a></li>
+      <li><a href="http://hood.ie/#docs">Docs</a></li>
       <li class="muted">·</li>
-      <li><a href="https://github.com/alanshaw/hoodie-plugins-www/graphs/contributors">Contributors</a></li>
-      <li class="muted">·</li>
-      <li><a href="https://github.com/alanshaw/hoodie-plugins-www/releases">Releases</a></li>
+      <li><a href="http://blog.hood.ie/">Blog</a></li>
+    </ul>
+    <ul class="list-inline">
+      <li><a href="https://twitter.com/hoodiehq"><img src="img/twitter.png"/></a></li>
+      <li><a href="https://github.com/hoodiehq/hoodie.js"><img src="img/github.png"/></a></li>
     </ul>
   </footer>
   <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
